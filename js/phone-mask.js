@@ -17,8 +17,15 @@
             this.url = url;
             this.relatedInput = relatedInput;
             this.selector = selector;
+            this.validAttr($(this.selector));
+
         }
 
+        validAttr(selector){
+            if(!selector.attr('maxlength')){
+                selector.attr('maxlength', '13');
+            }
+        }
         /**
          *
          * @param  maskPattern
