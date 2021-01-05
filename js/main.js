@@ -1,3 +1,5 @@
 $(document).ready(function () {
-    $('#phone').phoneMask();
+    $('#phone').phoneMask({
+        'select' : '.phone'
+    });
 });

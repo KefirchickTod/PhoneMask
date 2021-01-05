@@ -91,8 +91,20 @@
             });
 
             $this.selector.keyup(function () {
-                if(!this.value){
+                if(!this.value || this.value === '+'){
                     $this.relatedInput.val('none').trigger('change');
+                }
+                if(this.value.length > 2){
+                    let code = this.value;
+                    for (var i = 0; i < $this.countriesList.length; i++) {
+                        let countriesCode =  $this.countriesList[i].code;
+                        let countriesPhoneCode = $this.countriesList[i].phoneCode;
+                        if(code === countriesPhoneCode){
+                            $this.relatedInput.val(countriesCode).trigger('change');
+                            break;
+                        }
+                    }
+
                 }
             });
         }
