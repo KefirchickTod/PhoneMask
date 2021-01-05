@@ -1,4 +1,10 @@
-
+`use strict`;
+/**
+ * @link https://github.com/KefirchickTod/PhoneMask
+ * @version 0.1.2
+ * @author Zahar Pylypchuck <zacahrpu2@gmail.com>
+ *
+ */
 (function ($, window) {
     const phoneJsonUrl = 'https://api.npoint.io/d0ac985ca62e2966ec70';
     const globalSelectClass = 'phoneSelectMask form-control col-md-4';
